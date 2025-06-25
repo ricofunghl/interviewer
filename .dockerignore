@@ -1,0 +1,72 @@
+# Version control
+.git/
+.gitignore
+.svn/
+.hg/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+
+# Node.js artifacts
+node_modules/
+npm-debug.log
+yarn-debug.log
+
+# Build outputs
+build/
+dist/
+out/
+
+# Test and debug files
+test/
+tests/
+debug/
+*.log
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment and secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.crt
+config.local.*
+*.local.yml
+
+# Documentation
+README*
+*.md
+docs/
+
+# Docker files
+Dockerfile*
+docker-compose*
+
+# Temporary files and folders
+tmp/
+temp/
+*.tmp
+
+# Local development
+.local/
+local/
+
+# Project-specific examples
+env.example
+
+# Miscellaneous
+*.example
+
+# Exclude frontend and backend Dockerfiles from being ignored
+!frontend/Dockerfile
+!backend/Dockerfile

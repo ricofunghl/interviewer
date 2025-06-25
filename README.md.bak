@@ -1,0 +1,124 @@
+# AI Mock Interview Web App
+
+A comprehensive AI-powered mock interview platform that dynamically creates personalized interviews from job descriptions.
+
+## Features
+
+- **Dynamic Interview Generation**: Creates tailored interviews from job descriptions using AI
+- **Chat-based Interface**: Natural conversation flow with AI interviewer
+- **Real-time Feedback**: Instant scoring and feedback on responses
+- **Interview History**: Store and review past interviews
+- **Multi-format JD Input**: Upload PDFs or paste job descriptions
+
+## Tech Stack
+
+### Frontend
+- **React 18** with TypeScript
+- **Vite** for fast development and building
+- **Tailwind CSS** for styling
+- **React Router** for navigation
+- **Axios** for API calls
+- **React Hook Form** for form handling
+
+### Backend
+- **FastAPI** (Python) for robust API development
+- **SQLAlchemy** for database ORM
+- **PostgreSQL** for data persistence
+- **Redis** for caching and session management
+- **Celery** for background tasks
+
+### AI/ML
+- **OpenAI GPT-4** for interview generation and scoring
+- **LangChain** for prompt engineering
+- **Pydantic** for data validation
+
+### Infrastructure
+- **Docker** for containerization
+- **Docker Compose** for local development
+- **Nginx** for reverse proxy
+
+## Project Structure
+
+```
+interviewer/
+├── frontend/                 # React frontend application
+├── backend/                  # FastAPI backend application
+├── shared/                   # Shared types and utilities
+├── docker-compose.yml        # Development environment
+├── .env.example             # Environment variables template
+└── README.md                # This file
+```
+
+## Quick Start
+
+1. **Clone and setup environment**:
+   ```bash
+   git clone <repository>
+   cd interviewer
+   cp .env.example .env
+   # Edit .env with your API keys
+   ```
+
+2. **Start development environment**:
+   ```bash
+   docker-compose up -d
+   ```
+
+3. **Access the application**:
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:8000
+   - API Docs: http://localhost:8000/docs
+
+## Environment Variables
+
+Create a `.env` file with the following variables:
+
+```env
+# OpenAI
+OPENAI_API_KEY=your_openai_api_key
+
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/interviewer
+
+# Redis
+REDIS_URL=redis://localhost:6379
+
+# JWT Secret
+JWT_SECRET=your_jwt_secret
+```
+
+## Development
+
+### Frontend Development
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend Development
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+## API Endpoints
+
+- `POST /api/interviews/create` - Create new interview from JD
+- `POST /api/interviews/{id}/start` - Start interview session
+- `POST /api/interviews/{id}/respond` - Submit response to question
+- `GET /api/interviews/{id}/feedback` - Get interview feedback
+- `GET /api/interviews/history` - Get user's interview history
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+## License
+
+MIT License
