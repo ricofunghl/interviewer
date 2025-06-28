@@ -8,6 +8,7 @@ WORKDIR /app
 # Install system dependencies needed for build and runtime
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
+    ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 # Builder stage: install dependencies in a venv

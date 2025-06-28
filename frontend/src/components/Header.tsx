@@ -1,11 +1,12 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Brain, History, Home } from 'lucide-react'
+import { Brain, History, Home, MessageSquare } from 'lucide-react'
 
 const Header = () => {
   const location = useLocation()
 
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
+    { path: '/conversation', label: 'Conversation', icon: MessageSquare },
     { path: '/history', label: 'History', icon: History },
   ]
 
