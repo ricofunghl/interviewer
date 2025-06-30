@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import InterviewPage from './pages/InterviewPage'
 import HistoryPage from './pages/HistoryPage'
 import FeedbackPage from './pages/FeedbackPage'
+import ConversationPage from './pages/conversationPage'
 
 function App() {
   const [currentInterview, setCurrentInterview] = useState<number | null>(null)
@@ -27,6 +28,7 @@ function App() {
           />
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/feedback/:id" element={<FeedbackPage />} />
+          <Route path="/conversation" element={<ConversationPage />} />
         </Routes>
       </main>
     </div>

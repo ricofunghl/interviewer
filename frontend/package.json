@@ -10,13 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@elevenlabs/react": "^0.1.7",
+    "axios": "^1.6.2",
+    "clsx": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "elevenlabs-js": "^1.0.0",
+    "lucide-react": "^0.294.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.1",
-    "axios": "^1.6.2",
     "react-hook-form": "^7.48.2",
-    "lucide-react": "^0.294.0",
-    "clsx": "^2.0.0",
+    "react-router-dom": "^6.20.1",
     "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
@@ -35,4 +38,4 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
   }
-} 
+}
